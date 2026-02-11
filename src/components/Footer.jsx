@@ -123,7 +123,7 @@ function Footer() {
               </motion.div>
               <motion.div whileHover={{ x: 5 }} className="flex items-start gap-3 text-gray-300 drop-shadow-md">
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
-                <p>Odisha, India</p>
+                <p>Jagatsinghpur,Odisha, India</p>
               </motion.div>
             </div>
           </motion.div>
