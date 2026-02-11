@@ -100,7 +100,7 @@ function Contact() {
                     <label className="block text-white mb-2 font-semibold text-sm">Phone Number *</label>
                     <input
                       type="tel"
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+91 9876543210"
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white/15 transition-all"

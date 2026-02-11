@@ -113,8 +113,8 @@ function Footer() {
               <motion.div whileHover={{ x: 5 }} className="flex items-start gap-3 text-gray-300 drop-shadow-md">
                 <FaPhone className="text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p>+91 XXXXX XXXXX</p>
-                  <p>+91 XXXXX XXXXX</p>
+                  <p>+91 9876543210</p>
+                  <p>+91 9875659459</p>
                 </div>
               </motion.div>
               <motion.div whileHover={{ x: 5 }} className="flex items-start gap-3 text-gray-300 drop-shadow-md">
