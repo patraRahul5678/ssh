@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaHardHat, FaTools, FaBuilding, FaCubes, FaHammer, FaWarehouse } from "react-icons/fa";
 
 function Services() {
@@ -49,56 +48,26 @@ function Services() {
 
   return (
     <section id="services" className="py-24 bg-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-1/2 -right-1/2 w-full h-full border-[100px] border-primary/5 rounded-full"
-        ></motion.div>
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-1/2 -left-1/2 w-full h-full border-[100px] border-primary/5 rounded-full"
-        ></motion.div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <motion.span 
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-block bg-gradient-orange text-white font-bold px-6 py-2 rounded-full mb-4 shadow-lg"
-          >
+        <div className="text-center mb-16">
+          <span className="inline-block bg-gradient-orange text-white font-bold px-6 py-2 rounded-full mb-4 shadow-lg">
             WHAT WE DO
-          </motion.span>
+          </span>
           <h2 className="text-5xl md:text-6xl font-black text-dark mb-4">
             Our <span className="gradient-text">Construction</span> Services
           </h2>
           <p className="text-grayish text-lg max-w-2xl mx-auto">
             Comprehensive civil engineering solutions with cutting-edge technology
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -15 }}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl cursor-pointer hover:-translate-y-4 transition-transform"
               >
                 {/* Gradient Border Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -108,32 +77,22 @@ function Services() {
                 <div className="relative">
                   {/* Image with Overlay */}
                   <div className="relative h-56 overflow-hidden rounded-t-2xl">
-                    <motion.img 
-                      whileHover={{ scale: 1.15 }}
-                      transition={{ duration: 0.6 }}
+                    <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     
-                    {/* Animated Icon */}
-                    <motion.div
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className={`absolute top-4 right-4 bg-gradient-to-br ${service.color} p-4 rounded-xl shadow-2xl`}
-                    >
+                    {/* Icon */}
+                    <div className={`absolute top-4 right-4 bg-gradient-to-br ${service.color} p-4 rounded-xl shadow-2xl`}>
                       <Icon className="text-white text-2xl" />
-                    </motion.div>
+                    </div>
 
                     {/* Hover Overlay */}
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      className="absolute inset-0 bg-gradient-to-br from-primary/90 to-secondary/90 flex items-center justify-center"
-                    >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-secondary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <span className="text-white font-bold text-lg">View Details →</span>
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Text Content */}
@@ -144,51 +103,30 @@ function Services() {
                     <p className="text-grayish mb-4">{service.description}</p>
                     
                     <div className="flex items-center justify-between">
-                      <motion.div 
-                        className="flex items-center text-primary font-semibold group-hover:gap-3 gap-2 transition-all"
-                      >
+                      <div className="flex items-center text-primary font-semibold gap-2">
                         <span>Learn More</span>
-                        <motion.svg 
-                          animate={{ x: [0, 5, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                          className="w-5 h-5" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </motion.svg>
-                      </motion.div>
+                        </svg>
+                      </div>
                       
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        className={`w-10 h-10 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center text-white font-bold shadow-lg`}
-                      >
+                      <div className={`w-10 h-10 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center text-white font-bold shadow-lg`}>
                         {index + 1}
-                      </motion.div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-orange text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all"
-          >
+        <div className="text-center mt-16">
+          <button className="bg-gradient-orange text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all">
             View All Services →
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
     </section>
   );

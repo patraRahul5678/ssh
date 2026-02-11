@@ -164,10 +164,10 @@ function Contact() {
             {/* Contact Cards */}
             <div className="grid gap-6">
               {[
-                { icon: FaPhone, title: "Call Us", info: ["+91 XXXXX XXXXX", "+91 XXXXX XXXXX"], color: "from-green-500 to-emerald-600" },
-                { icon: FaWhatsapp, title: "WhatsApp", info: ["+91 XXXXX XXXXX"], color: "from-green-400 to-green-600" },
+                { icon: FaPhone, title: "Call Us", info: ["+91 9876549910", "+91 9876543440"], color: "from-green-500 to-emerald-600" },
+                { icon: FaWhatsapp, title: "WhatsApp", info: ["+91 9876547810"], color: "from-green-400 to-green-600" },
                 { icon: FaEnvelope, title: "Email Us", info: ["info@sahooengineering.com"], color: "from-blue-500 to-cyan-600" },
-                { icon: FaMapMarkerAlt, title: "Visit Us", info: ["Odisha, India"], color: "from-red-500 to-pink-600" },
+                { icon: FaMapMarkerAlt, title: "Visit Us", info: ["Jagatsinghpur,Odisha, India"], color: "from-red-500 to-pink-600" },
               ].map((contact, i) => {
                 const Icon = contact.icon;
                 return (
