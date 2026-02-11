@@ -30,24 +30,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 cursor-pointer"
-          >
-            <motion.div
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="bg-gradient-orange p-2 rounded-lg shadow-lg"
-            >
-              <FaHardHat className="text-white text-2xl" />
-            </motion.div>
-            <div>
-              <h1 className="text-primary font-black text-2xl tracking-tight drop-shadow-lg">
-                SAHOO
-              </h1>
-              <p className="text-white text-xs font-semibold -mt-1 drop-shadow-md">ENGINEERING</p>
-            </div>
-          </motion.div>
+          <img src="../public/image.png" alt="Company Logo" className="h-12 w-auto" />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
