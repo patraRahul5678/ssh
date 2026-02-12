@@ -17,15 +17,14 @@ function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
-
-      <div className="relative max-w-7xl mx-auto px-6 py-16 z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 z-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-black mb-4 drop-shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-black mb-4 drop-shadow-lg">
               <span className="text-primary">SAHOO</span> <span className="text-white">ENGINEERING</span>
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed drop-shadow-md">
+            <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed drop-shadow-md text-sm sm:text-base">
               Leading civil & RCC contractor in Odisha, delivering excellence in construction since 2014.
             </p>
             <div className="flex gap-4">
@@ -37,7 +36,7 @@ function Footer() {
                     href={social.href}
                     className={`bg-white/10 backdrop-blur-sm p-3 rounded-full ${social.color} transition-colors shadow-lg`}
                   >
-                    <Icon className="text-xl" />
+                    <Icon className="text-lg sm:text-xl" />
                   </a>
                 );
               })}
@@ -46,11 +45,11 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold mb-6 text-primary drop-shadow-lg">Quick Links</h4>
+            <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-primary drop-shadow-lg">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 drop-shadow-md">
+                  <a href={link.href} className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 drop-shadow-md text-sm sm:text-base">
                     <span className="text-primary font-bold">›</span>
                     {link.name}
                   </a>
@@ -61,10 +60,10 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xl font-bold mb-6 text-primary drop-shadow-lg">Our Services</h4>
+            <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-primary drop-shadow-lg">Our Services</h4>
             <ul className="space-y-3 text-gray-300">
               {["Excavation", "RCC Work", "PCC Work", "Reinforcement", "Rock Blasting", "Formwork"].map((service, index) => (
-                <li key={index} className="flex items-center gap-2 drop-shadow-md">
+                <li key={index} className="flex items-center gap-2 drop-shadow-md text-sm sm:text-base">
                   <span className="text-primary font-bold">•</span>
                   {service}
                 </li>
@@ -74,20 +73,20 @@ function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-xl font-bold mb-6 text-primary drop-shadow-lg">Contact Us</h4>
+            <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-primary drop-shadow-lg">Contact Us</h4>
             <div className="space-y-4">
-              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md">
+              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md text-sm sm:text-base">
                 <FaPhone className="text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p>+91 9876543210</p>
                   <p>+91 9875659459</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md">
+              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md text-sm sm:text-base">
                 <FaEnvelope className="text-primary mt-1 flex-shrink-0" />
-                <p>info@sahooengineering.com</p>
+                <p className="break-words">info@sahooengineering.com</p>
               </div>
-              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md">
+              <div className="flex items-start gap-3 text-gray-300 drop-shadow-md text-sm sm:text-base">
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
                 <p>Jagatsinghpur,Odisha, India</p>
               </div>
@@ -96,12 +95,12 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-8 mt-8">
+        <div className="border-t border-white/20 pt-6 sm:pt-8 mt-6 sm:mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-300 text-sm text-center md:text-left drop-shadow-md">
+            <p className="text-gray-300 text-xs sm:text-sm text-center md:text-left drop-shadow-md">
               © {new Date().getFullYear()} Sahoo Engineering. All rights reserved. | Civil Construction Company in Odisha
             </p>
-            <div className="flex gap-6 text-sm text-gray-300">
+            <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm text-gray-300">
               <a href="#" className="hover:text-primary transition-colors drop-shadow-md">
                 Privacy Policy
               </a>

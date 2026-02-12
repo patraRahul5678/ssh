@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaBars, FaTimes, FaHardHat } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,8 @@ function Navbar() {
 
   const menuItems = [
     { name: "Services", href: "#services" },
+    { name: "Leadership", href: "#leadership" },
+    { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" }
   ];
@@ -27,19 +29,19 @@ function Navbar() {
         scrolled ? 'bg-dark/98 backdrop-blur-lg shadow-2xl' : 'bg-dark/80 backdrop-blur-md'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <img src="../public/image.png" alt="Company Logo" className="h-12 w-auto" />
+          <img src="../image.png" alt="Company Logo" className="h-10 sm:h-12 w-auto" />
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {menuItems.map((item, index) => (
               <motion.a
                 key={index}
                 href={item.href}
                 whileHover={{ scale: 1.1, color: "#FFA500" }}
-                className="text-white font-semibold hover:text-primary transition-colors relative group drop-shadow-md"
+                className="text-white font-semibold hover:text-primary transition-colors relative group drop-shadow-md text-sm lg:text-base"
               >
                 {item.name}
                 <motion.span
@@ -51,7 +53,7 @@ function Navbar() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 165, 0, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-orange text-white px-6 py-3 rounded-full font-bold shadow-lg"
+              className="bg-gradient-orange text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-bold shadow-lg text-sm lg:text-base"
             >
               Get Quote
             </motion.button>
@@ -76,7 +78,7 @@ function Navbar() {
           }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-3 sm:space-y-4">
             {menuItems.map((item, index) => (
               <motion.a
                 key={index}
@@ -85,7 +87,7 @@ function Navbar() {
                 animate={{ x: isOpen ? 0 : -50, opacity: isOpen ? 1 : 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => setIsOpen(false)}
-                className="block text-white font-semibold hover:text-primary transition-colors py-2 drop-shadow-md"
+                className="block text-white font-semibold hover:text-primary transition-colors py-2 drop-shadow-md text-base"
               >
                 {item.name}
               </motion.a>
@@ -94,7 +96,7 @@ function Navbar() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: isOpen ? 0 : -50, opacity: isOpen ? 1 : 0 }}
               transition={{ delay: 0.3 }}
-              className="w-full bg-gradient-orange text-white px-6 py-3 rounded-full font-bold shadow-lg"
+              className="w-full bg-gradient-orange text-white px-6 py-3 rounded-full font-bold shadow-lg text-base"
             >
               Get Quote
             </motion.button>

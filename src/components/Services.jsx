@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaHardHat, FaTools, FaBuilding, FaCubes, FaHammer, FaWarehouse } from "react-icons/fa";
 
 function Services() {
@@ -47,27 +48,42 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-gradient-orange text-white font-bold px-6 py-2 rounded-full mb-4 shadow-lg">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <motion.span
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-block bg-gradient-orange text-white font-bold px-4 sm:px-6 py-2 rounded-full mb-4 shadow-lg text-sm sm:text-base"
+          >
             WHAT WE DO
-          </span>
-          <h2 className="text-5xl md:text-6xl font-black text-dark mb-4">
+          </motion.span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-dark mb-4">
             Our <span className="gradient-text">Construction</span> Services
           </h2>
-          <p className="text-grayish text-lg max-w-2xl mx-auto">
+          <p className="text-grayish text-base sm:text-lg max-w-2xl mx-auto px-4">
             Comprehensive civil engineering solutions with cutting-edge technology
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl cursor-pointer hover:-translate-y-4 transition-transform"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl cursor-pointer"
               >
                 {/* Gradient Border Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -76,57 +92,86 @@ function Services() {
                 {/* Content */}
                 <div className="relative">
                   {/* Image with Overlay */}
-                  <div className="relative h-56 overflow-hidden rounded-t-2xl">
-                    <img 
+                  <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-2xl">
+                    <motion.img 
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     
                     {/* Icon */}
-                    <div className={`absolute top-4 right-4 bg-gradient-to-br ${service.color} p-4 rounded-xl shadow-2xl`}>
-                      <Icon className="text-white text-2xl" />
-                    </div>
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className={`absolute top-4 right-4 bg-gradient-to-br ${service.color} p-3 sm:p-4 rounded-xl shadow-2xl`}
+                    >
+                      <Icon className="text-white text-xl sm:text-2xl" />
+                    </motion.div>
 
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-secondary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-white font-bold text-lg">View Details →</span>
-                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      className="absolute inset-0 bg-gradient-to-br from-primary/90 to-secondary/90 flex items-center justify-center"
+                    >
+                      <span className="text-white font-bold text-base sm:text-lg">View Details →</span>
+                    </motion.div>
                   </div>
 
                   {/* Text Content */}
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl text-dark mb-2 group-hover:text-primary transition-colors">
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-bold text-lg sm:text-xl text-dark mb-2 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-grayish mb-4">{service.description}</p>
+                    <p className="text-grayish mb-4 text-sm sm:text-base">{service.description}</p>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-primary font-semibold gap-2">
+                      <div className="flex items-center text-primary font-semibold gap-2 text-sm sm:text-base">
                         <span>Learn More</span>
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <motion.svg
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                          className="w-4 h-4 sm:w-5 sm:h-5" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+                        </motion.svg>
                       </div>
                       
-                      <div className={`w-10 h-10 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center text-white font-bold shadow-lg`}>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        className={`w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center text-white font-bold shadow-lg text-sm sm:text-base`}
+                      >
                         {index + 1}
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <button className="bg-gradient-orange text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-12 sm:mt-16"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-orange text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all"
+          >
             View All Services →
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );
