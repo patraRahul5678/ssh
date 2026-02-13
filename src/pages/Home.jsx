@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Services from "../components/Services";
 import CoreServices from "../components/CoreServices";
 import WhyChooseUs from "../components/WhyChooseUs";
+import ManagingDirector from "../components/ManagingDirector";
 import Leadership from "../components/Leadership";
 import Projects from "../components/Projects";
 import MissionVision from "../components/MissionVision";
@@ -17,6 +18,7 @@ function Home() {
       <Services />
       <CoreServices />
       <WhyChooseUs />
+      <ManagingDirector />
       <Leadership />
       <Projects />
       <MissionVision />

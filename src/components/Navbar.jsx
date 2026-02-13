@@ -32,7 +32,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <img src="../image.png" alt="Company Logo" className="h-10 sm:h-12 w-auto" />
+          <img src="../logo.png" alt="Company Logo" className="h-8 sm:h-10 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] brightness-150 contrast-125" />
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-6">
