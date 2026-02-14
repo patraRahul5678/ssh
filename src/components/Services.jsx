@@ -133,33 +133,10 @@ function Services({ navigate }) {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => navigate('services')}
-                      className="w-full bg-gradient-orange text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg mb-3 cursor-pointer"
+                      className="w-full bg-gradient-orange text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg cursor-pointer"
                     >
                       Learn More →
                     </motion.button>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-primary font-semibold gap-2 text-sm sm:text-base">
-                        <span>Quick View</span>
-                        <motion.svg
-                          animate={{ x: [0, 5, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                          className="w-4 h-4 sm:w-5 sm:h-5" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </motion.svg>
-                      </div>
-                      
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        className={`w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center text-white font-bold shadow-lg text-sm sm:text-base`}
-                      >
-                        {index + 1}
-                      </motion.div>
-                    </div>
                   </div>
                 </div>
               </motion.div>

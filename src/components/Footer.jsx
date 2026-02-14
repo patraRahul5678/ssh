@@ -109,6 +109,15 @@ function Footer() {
               </a>
             </div>
           </div>
+          <div className="flex items-center justify-center gap-2 mt-6 pt-6 border-t border-white/10">
+            <span className="text-gray-400 text-xs sm:text-sm">Developed and powered by</span>
+            <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 hover:border-primary/30 transition-all">
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                <span className="text-white font-black text-xs"><img src="../image.png" alt="Smartnex" /></span>
+              </div>
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-sm">Smartnex Technologies</span>
+            </div>
+          </div>
         </div>
       </div>
 
