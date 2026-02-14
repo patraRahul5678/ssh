@@ -6,42 +6,42 @@ function Services({ navigate }) {
     {
       title: "Excavation up to 12m",
       icon: FaTools,
-      image:"../public/excavation.png",
+      image:"/excavation.png",
       description: "Deep excavation with advanced machinery",
       color: "from-orange-500 to-red-500"
     },
     {
       title: "Hard Rock Blasting",
       icon: FaHammer,
-      image: "../public/hardRocking.png",
+      image: "/hardRocking.png",
       description: "Controlled blasting for tough terrain",
       color: "from-yellow-500 to-orange-500"
     },
     {
       title: "RCC (M20, M25)",
       icon: FaBuilding,
-      image: "../public/RCC.png",
+      image: "/RCC.png",
       description: "High-grade reinforced concrete work",
       color: "from-orange-600 to-yellow-500"
     },
     {
       title: "PCC (M15)",
       icon: FaCubes,
-      image: "../public/PCC.png",
+      image: "/PCC.png",
       description: "Plain cement concrete foundations",
       color: "from-amber-500 to-orange-500"
     },
     {
       title: "Reinforcement Work",
       icon: FaHardHat,
-      image: "../public/Reinforcement.png",
+      image: "/Reinforcement.png",
       description: "Steel reinforcement & bar bending",
       color: "from-orange-500 to-amber-600"
     },
     {
       title: "Formwork & Shuttering",
       icon: FaWarehouse,
-      image: "../public/FrameWork.png",
+      image: "/FrameWork.png",
       description: "Precision formwork solutions",
       color: "from-yellow-600 to-orange-600"
     }
@@ -98,6 +98,7 @@ function Services({ navigate }) {
                       transition={{ duration: 0.5 }}
                       src={service.image} 
                       alt={service.title}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>

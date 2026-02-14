@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import AllProjects from "./pages/AllProjects";
-import AllServices from "./pages/AllServices";
-import ServiceDetail from "./pages/ServiceDetail";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer";
+
+const AllProjects = lazy(() => import("./pages/AllProjects"));
+const AllServices = lazy(() => import("./pages/AllServices"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -25,20 +26,26 @@ function App() {
   };
 
   const renderPage = () => {
+    const LoadingSpinner = () => (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark via-gray-900 to-black">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-white text-lg">Loading...</p>
+        </div>
+      </div>
+    );
+
     switch(currentPage) {
       case 'projects':
-        return <AllProjects navigate={navigate} />;
+        return <Suspense fallback={<LoadingSpinner />}><AllProjects navigate={navigate} /></Suspense>;
       case 'services':
-        return <AllServices navigate={navigate} />;
+        return <Suspense fallback={<LoadingSpinner />}><AllServices navigate={navigate} /></Suspense>;
       case 'service-detail':
-        return <ServiceDetail navigate={navigate} serviceId={serviceId} />;
+        return <Suspense fallback={<LoadingSpinner />}><ServiceDetail navigate={navigate} serviceId={serviceId} /></Suspense>;
       case 'about':
-        return <AboutPage navigate={navigate} />;
+        return <Suspense fallback={<LoadingSpinner />}><AboutPage navigate={navigate} /></Suspense>;
       case 'contact':
-        return <ContactPage navigate={navigate} />;
-      case 'leadership':
-        window.location.href = '#leadership';
-        return <Home navigate={navigate} />;
+        return <Suspense fallback={<LoadingSpinner />}><ContactPage navigate={navigate} /></Suspense>;
       default:
         return <Home navigate={navigate} />;
     }

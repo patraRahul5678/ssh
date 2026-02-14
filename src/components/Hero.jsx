@@ -114,6 +114,7 @@ function Hero({ navigate }) {
                 <img
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80"
                   alt="Construction"
+                  loading="lazy"
                   className="relative rounded-3xl shadow-2xl border-4 border-primary/30"
                 />
 

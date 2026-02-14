@@ -29,8 +29,9 @@ function About({ navigate }) {
                   className="relative overflow-hidden rounded-2xl shadow-2xl"
                 >
                   <img 
-                    src="../buiding.png" 
+                    src="/buiding.png" 
                     alt="Construction site"
+                    loading="lazy"
                     className="w-full h-56 sm:h-72 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -41,8 +42,9 @@ function About({ navigate }) {
                   className="relative overflow-hidden rounded-2xl shadow-2xl mt-8 sm:mt-12"
                 >
                   <img 
-                    src="../building1.png" 
+                    src="/building1.png" 
                     alt="Heavy machinery"
+                    loading="lazy"
                     className="w-full h-56 sm:h-72 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

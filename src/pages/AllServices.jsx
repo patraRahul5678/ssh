@@ -8,7 +8,7 @@ function AllServices({ navigate }) {
       id: "building-construction",
       title: "Building Construction",
       icon: FaBuilding,
-      image: "../public/BuildingConstruction.png",
+      image: "/BuildingConstruction.png",
       description: "Comprehensive construction solutions for residential, commercial, and institutional buildings with full project lifecycle execution from planning to completion.",
       features: ["Residential Buildings", "Commercial Complexes", "Institutional Projects", "Full Lifecycle Management"],
       services: ["Site Planning & Design", "Foundation Work", "Structural Construction", "Finishing & Handover"],
@@ -18,7 +18,7 @@ function AllServices({ navigate }) {
       id: "railway-bridge",
       title: "Railway & Bridge Construction",
       icon: FaTrain,
-      image: "../public/Railway&BridgeConstruction.png",
+      image: "/Railway&BridgeConstruction.png",
       description: "Specialized expertise in minor and major bridge works, structural concrete and steel components, with extensive railway infrastructure development capabilities.",
       features: ["Minor & Major Bridges", "Structural Concrete Works", "Steel Components", "Railway Infrastructure"],
       services: ["Bridge Design & Construction", "Railway Track Support", "Structural Steel Work", "Infrastructure Maintenance"],
@@ -28,7 +28,7 @@ function AllServices({ navigate }) {
       id: "piling-foundation",
       title: "Piling &Foundation Works",
       icon: FaHammer,
-      image: "../public/Pilling&FoundationWorks.png",
+      image: "/Pilling&FoundationWorks.png",
       description: "Advanced deep foundation solutions designed for heavy load-bearing structures with infrastructure-grade piling systems ensuring long-term stability.",
       features: ["Deep Foundation Solutions", "Heavy Load Structures", "Infrastructure Piling", "Soil Stabilization"],
       services: ["Bored Piling", "Driven Piling", "Foundation Design", "Load Testing"],
@@ -38,7 +38,7 @@ function AllServices({ navigate }) {
       id: "track-linking",
       title: "Track Linking & Civil Infrastructure",
       icon: FaRoad,
-      image: "../public/TrackLining&Infrastructure.png",
+      image: "/TrackLining&Infrastructure.png",
       description: "Comprehensive railway track support works and supporting civil engineering infrastructure for seamless connectivity and operational excellence.",
       features: ["Railway Track Support", "Civil Infrastructure", "Connectivity Solutions", "Maintenance Support"],
       services: ["Track Laying", "Ballast Work", "Drainage Systems", "Platform Construction"],
@@ -91,7 +91,7 @@ function AllServices({ navigate }) {
                 className="group bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-gray-100 hover:border-primary/30 transition-all"
               >
                 <div className="relative h-56 sm:h-64 overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                   <div className={`absolute top-4 right-4 bg-gradient-to-br ${service.color} p-4 rounded-xl shadow-lg`}>
                     <Icon className="text-white text-2xl sm:text-3xl" />
