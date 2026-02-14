@@ -9,7 +9,7 @@ function AllProjects({ navigate }) {
       client: "OSIL",
       category: "Major Civil Construction",
       description: "Successfully executed major civil construction project with comprehensive infrastructure development including foundation work, structural concrete, and finishing.",
-      image: "../public/osil.webp",
+      image: "/osil.webp",
       location: "Odisha",
       duration: "18 months",
       value: "₹5.2 Crore"
@@ -19,7 +19,7 @@ function AllProjects({ navigate }) {
       client: "Private Sector",
       category: "Infrastructure Building",
       description: "Completed high-rise infrastructure building project with modern construction techniques, including deep foundation and RCC framework.",
-      image: "../public/RoyalTower.png",
+      image: "/RoyalTower.png",
       location: "Damana, Odisha",
       duration: "24 months",
       value: "₹8.5 Crore"
@@ -29,7 +29,7 @@ function AllProjects({ navigate }) {
       client: "East Coast Railway",
       category: "Bridge Construction",
       description: "Major bridge construction project ensuring railway infrastructure excellence with structural steel and concrete components.",
-      image: "../public/Railway.png",
+      image: "/Railway.png",
       location: "Odisha",
       duration: "20 months",
       value: "₹12 Crore"
@@ -39,7 +39,7 @@ function AllProjects({ navigate }) {
       client: "East Coast Railway",
       category: "Track Linking",
       description: "Railway track support works and civil infrastructure for seamless connectivity across multiple stations.",
-      image: "../public/trackLining.png",
+      image: "/trackLining.png",
       location: "Odisha",
       duration: "15 months",
       value: "₹6.8 Crore"
@@ -49,7 +49,7 @@ function AllProjects({ navigate }) {
       client: "Government of Odisha",
       category: "Civil Infrastructure",
       description: "State government civil contract for highway development including excavation, piling, and road construction.",
-      image: "../public/stateHighway.png",
+      image: "/stateHighway.png",
       location: "Odisha",
       duration: "22 months",
       value: "₹15 Crore"
@@ -59,7 +59,7 @@ function AllProjects({ navigate }) {
       client: "Private Industrial Group",
       category: "Foundation Works",
       description: "Deep piling and foundation works for heavy industrial complex with infrastructure-grade stability solutions.",
-      image: "../public/industrilaComplex.png",
+      image: "/industrilaComplex.png",
       location: "Jagatsinghpur, Odisha",
       duration: "12 months",
       value: "₹4.5 Crore"
@@ -109,7 +109,7 @@ function AllProjects({ navigate }) {
               className="group bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-gray-100 hover:border-primary/30 transition-all"
             >
               <div className="relative h-48 sm:h-56 overflow-hidden">
-                <img src={project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={project.image} alt={project.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <FaCheckCircle className="absolute top-4 right-4 text-green-500 text-2xl sm:text-3xl" />
                 <div className="absolute bottom-4 left-4 right-4">
