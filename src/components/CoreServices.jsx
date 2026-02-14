@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { FaBuilding, FaTrain, FaHammer, FaRoad } from "react-icons/fa";
 
-function CoreServices() {
+function CoreServices({ navigate }) {
   const services = [
     {
+      id: "building-construction",
       title: "Building Construction",
       icon: FaBuilding,
       description: "Comprehensive construction solutions for residential, commercial, and institutional buildings with full project lifecycle execution from planning to completion.",
@@ -11,6 +12,7 @@ function CoreServices() {
       color: "from-blue-500 to-cyan-600"
     },
     {
+      id: "railway-bridge",
       title: "Railway & Bridge Construction",
       icon: FaTrain,
       description: "Specialized expertise in minor and major bridge works, structural concrete and steel components, with extensive railway infrastructure development capabilities.",
@@ -18,6 +20,7 @@ function CoreServices() {
       color: "from-orange-500 to-red-600"
     },
     {
+      id: "piling-foundation",
       title: "Piling & Foundation Works",
       icon: FaHammer,
       description: "Advanced deep foundation solutions designed for heavy load-bearing structures with infrastructure-grade piling systems ensuring long-term stability.",
@@ -25,6 +28,7 @@ function CoreServices() {
       color: "from-green-500 to-emerald-600"
     },
     {
+      id: "track-linking",
       title: "Track Linking & Civil Infrastructure",
       icon: FaRoad,
       description: "Comprehensive railway track support works and supporting civil engineering infrastructure for seamless connectivity and operational excellence.",
@@ -92,7 +96,7 @@ function CoreServices() {
 
                   <div className="mb-6">
                     <h4 className="text-dark font-bold mb-3 text-sm sm:text-base">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       {service.features.map((feature, i) => (
                         <motion.div
                           key={i}
@@ -112,7 +116,8 @@ function CoreServices() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-full bg-gradient-to-r ${service.color} text-white px-6 py-3 sm:py-4 rounded-xl font-bold shadow-lg text-sm sm:text-base`}
+                    onClick={() => navigate('service-detail', service.id)}
+                    className={`w-full bg-gradient-to-r ${service.color} text-white px-6 py-3 sm:py-4 rounded-xl font-bold shadow-lg text-sm sm:text-base cursor-pointer`}
                   >
                     Learn More →
                   </motion.button>

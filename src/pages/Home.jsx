@@ -3,26 +3,24 @@ import Services from "../components/Services";
 import CoreServices from "../components/CoreServices";
 import WhyChooseUs from "../components/WhyChooseUs";
 import ManagingDirector from "../components/ManagingDirector";
-import Leadership from "../components/Leadership";
 import Projects from "../components/Projects";
 import MissionVision from "../components/MissionVision";
 import About from "../components/About";
 import Stats from "../components/Stats";
 import Contact from "../components/Contact";
 
-function Home() {
+function Home({ navigate }) {
   return (
     <>
-      <Hero />
-      <Stats />
-      <Services />
-      <CoreServices />
+      <Hero navigate={navigate} />
+      <Stats navigate={navigate} />
+      <Services navigate={navigate} />
+      <CoreServices navigate={navigate} />
       <WhyChooseUs />
       <ManagingDirector />
-      <Leadership />
-      <Projects />
+      <Projects navigate={navigate} />
       <MissionVision />
-      <About />
+      <About navigate={navigate} />
       <Contact />
     </>
   );

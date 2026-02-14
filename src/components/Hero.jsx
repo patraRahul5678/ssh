@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { FaHardHat } from "react-icons/fa";
 
-function Hero() {
+function Hero({ navigate }) {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-cover bg-center">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80')] bg-cover bg-center"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/hero.png)" }}
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
       </div>
 
@@ -57,15 +60,17 @@ function Hero() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-orange text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-bold rounded-full shadow-2xl hover:shadow-primary/50 transition-shadow text-sm sm:text-base"
+                  onClick={() => navigate('contact')}
+                  className="bg-gradient-orange text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-bold rounded-full shadow-2xl hover:shadow-primary/50 transition-shadow text-sm sm:text-base cursor-pointer"
                 >
                   Get Free Quote
                 </motion.button>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="glass-effect text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-bold rounded-full backdrop-blur-md hover:bg-white/20 transition-colors text-sm sm:text-base"
+                  onClick={() => navigate('projects')}
+                  className="glass-effect text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 font-bold rounded-full backdrop-blur-md hover:bg-white/20 transition-colors text-sm sm:text-base cursor-pointer"
                 >
                   View Projects →
                 </motion.button>
@@ -106,12 +111,12 @@ function Hero() {
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-orange blur-3xl opacity-30 rounded-3xl"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
+                <img
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80"
                   alt="Construction"
                   className="relative rounded-3xl shadow-2xl border-4 border-primary/30"
                 />
-                
+
                 {/* Badge */}
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}

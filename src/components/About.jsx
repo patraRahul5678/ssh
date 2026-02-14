@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaAward, FaUsers, FaShieldAlt, FaClock, FaCheckCircle } from "react-icons/fa";
 
-function About() {
+function About({ navigate }) {
   const features = [
     { icon: FaAward, title: "Quality Assured", desc: "ISO certified processes", color: "from-yellow-400 to-orange-500" },
     { icon: FaUsers, title: "Expert Team", desc: "Skilled professionals", color: "from-blue-400 to-cyan-500" },
@@ -29,7 +29,7 @@ function About() {
                   className="relative overflow-hidden rounded-2xl shadow-2xl"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" 
+                    src="../buiding.png" 
                     alt="Construction site"
                     className="w-full h-56 sm:h-72 object-cover"
                   />
@@ -41,7 +41,7 @@ function About() {
                   className="relative overflow-hidden rounded-2xl shadow-2xl mt-8 sm:mt-12"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=400&q=80" 
+                    src="../building1.png" 
                     alt="Heavy machinery"
                     className="w-full h-56 sm:h-72 object-cover"
                   />
@@ -135,7 +135,8 @@ function About() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 165, 0, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-orange text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold shadow-xl text-sm sm:text-base"
+              onClick={() => navigate('contact')}
+              className="bg-gradient-orange text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold shadow-xl text-sm sm:text-base cursor-pointer"
             >
               <span className="flex items-center gap-2">
                 Learn More About Us

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaBuilding, FaTrain, FaLandmark } from "react-icons/fa";
 
-function Projects() {
+function Projects({ navigate }) {
   const completedProjects = [
     {
       name: "OSIL – Pintu Babu Project",
@@ -128,7 +128,7 @@ function Projects() {
           <p className="text-grayish text-sm sm:text-base">Trusted by leading organizations across sectors</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6">
           {clients.map((client, index) => (
             <motion.div
               key={index}
@@ -156,7 +156,8 @@ function Projects() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-orange text-white px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-base shadow-2xl"
+            onClick={() => navigate('projects')}
+            className="bg-gradient-orange text-white px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-base shadow-2xl cursor-pointer"
           >
             View All Projects →
           </motion.button>

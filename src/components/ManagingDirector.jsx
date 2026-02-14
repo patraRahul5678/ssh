@@ -11,7 +11,7 @@ function ManagingDirector() {
   const contact = [
     { icon: FaPhone, label: "Phone", value: "+91 97778 16655", href: "tel:+919777816655" },
     { icon: FaWhatsapp, label: "WhatsApp", value: "+91 97778 16655", href: "https://wa.me/919777816655" },
-    { icon: FaEnvelope, label: "Email", value: "sahooengineering@gmail.com", href: "mailto:sahooengineering@gmail.com" }
+    { icon: FaEnvelope, label: "Email", value: "www.sahooengineering@gmail.com", href: "mailto:www.sahooengineering@gmail.com" }
   ];
 
   return (
@@ -43,7 +43,7 @@ function ManagingDirector() {
           className="max-w-5xl mx-auto"
         >
           <div className="glass-effect rounded-3xl overflow-hidden border-2 border-primary/30 shadow-2xl">
-            <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 p-4 sm:p-6 md:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 p-4 sm:p-6 md:p-8 lg:p-10">
               {/* Photo Section */}
               <div className="lg:col-span-2 flex flex-col items-center">
                 <motion.div
@@ -51,7 +51,7 @@ function ManagingDirector() {
                   className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 mb-4 sm:mb-6"
                 >
                   <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border-4 border-primary/50 overflow-hidden">
-                    <img src="../founder.png" alt="Founder" className="w-full h-full object-cover" />
+                    <img src="/founder.png" alt="Founder" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-gradient-orange text-white px-3 py-1 sm:px-4 sm:py-2 rounded-xl shadow-lg">
                     <span className="font-bold text-xs sm:text-sm">Founder</span>
@@ -62,7 +62,7 @@ function ManagingDirector() {
                 <p className="text-primary font-bold text-sm sm:text-base md:text-lg mb-4 sm:mb-6">Managing Director & Founder</p>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 w-full">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 w-full max-w-sm mx-auto lg:max-w-none">
                   {stats.map((stat, i) => {
                     const Icon = stat.icon;
                     return (

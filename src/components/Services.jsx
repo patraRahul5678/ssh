@@ -1,47 +1,47 @@
 import { motion } from "framer-motion";
 import { FaHardHat, FaTools, FaBuilding, FaCubes, FaHammer, FaWarehouse } from "react-icons/fa";
 
-function Services() {
+function Services({ navigate }) {
   const services = [
     {
       title: "Excavation up to 12m",
       icon: FaTools,
-      image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=400&q=80",
+      image:"../public/excavation.png",
       description: "Deep excavation with advanced machinery",
       color: "from-orange-500 to-red-500"
     },
     {
       title: "Hard Rock Blasting",
       icon: FaHammer,
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80",
+      image: "../public/hardRocking.png",
       description: "Controlled blasting for tough terrain",
       color: "from-yellow-500 to-orange-500"
     },
     {
       title: "RCC (M20, M25)",
       icon: FaBuilding,
-      image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=400&q=80",
+      image: "../public/RCC.png",
       description: "High-grade reinforced concrete work",
       color: "from-orange-600 to-yellow-500"
     },
     {
       title: "PCC (M15)",
       icon: FaCubes,
-      image: "https://images.unsplash.com/photo-1597476329744-2c2c90f0e0e4?w=400&q=80",
+      image: "../public/PCC.png",
       description: "Plain cement concrete foundations",
       color: "from-amber-500 to-orange-500"
     },
     {
       title: "Reinforcement Work",
       icon: FaHardHat,
-      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&q=80",
+      image: "../public/Reinforcement.png",
       description: "Steel reinforcement & bar bending",
       color: "from-orange-500 to-amber-600"
     },
     {
       title: "Formwork & Shuttering",
       icon: FaWarehouse,
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
+      image: "../public/FrameWork.png",
       description: "Precision formwork solutions",
       color: "from-yellow-600 to-orange-600"
     }
@@ -128,9 +128,18 @@ function Services() {
                     </h3>
                     <p className="text-grayish mb-4 text-sm sm:text-base">{service.description}</p>
                     
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => navigate('services')}
+                      className="w-full bg-gradient-orange text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg mb-3 cursor-pointer"
+                    >
+                      Learn More →
+                    </motion.button>
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-primary font-semibold gap-2 text-sm sm:text-base">
-                        <span>Learn More</span>
+                        <span>Quick View</span>
                         <motion.svg
                           animate={{ x: [0, 5, 0] }}
                           transition={{ duration: 1.5, repeat: Infinity }}
@@ -167,7 +176,8 @@ function Services() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-orange text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all"
+            onClick={() => navigate('services')}
+            className="bg-gradient-orange text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all cursor-pointer"
           >
             View All Services →
           </motion.button>

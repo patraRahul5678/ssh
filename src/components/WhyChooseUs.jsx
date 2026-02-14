@@ -36,7 +36,7 @@ function WhyChooseUs() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (

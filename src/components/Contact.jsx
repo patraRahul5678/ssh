@@ -92,7 +92,8 @@ function Contact() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-orange text-white px-6 sm:px-8 py-4 sm:py-5 font-bold rounded-xl transition-all shadow-2xl text-sm sm:text-base"
+                  type="submit"
+                  className="w-full bg-gradient-orange text-white px-6 sm:px-8 py-4 sm:py-5 font-bold rounded-xl transition-all shadow-2xl text-sm sm:text-base cursor-pointer"
                 >
                   <span className="flex items-center justify-center gap-2">
                     Send Inquiry

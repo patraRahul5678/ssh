@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-function Stats() {
+function Stats({ navigate }) {
   const stats = [
     { end: 150, suffix: "+", label: "Projects Completed", icon: "🏗️" },
     { end: 12, suffix: "m", label: "Max Excavation Depth", icon: "⛏️" },
@@ -60,7 +60,7 @@ function Stats() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80')" 
+            backgroundImage: "url(/stats.png)"
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-black/90 to-dark/95"></div>
@@ -151,7 +151,8 @@ function Stats() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(255, 165, 0, 0.6)" }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-orange text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-2xl"
+            onClick={() => navigate('contact')}
+            className="bg-gradient-orange text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-2xl cursor-pointer"
           >
             Start Your Project Today
           </motion.button>
