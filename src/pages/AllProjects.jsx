@@ -9,7 +9,7 @@ function AllProjects({ navigate }) {
       client: "OSIL",
       category: "Major Civil Construction",
       description: "Successfully executed major civil construction project with comprehensive infrastructure development including foundation work, structural concrete, and finishing.",
-      image: "../public/osil.png",
+      image: "../public/osil.webp",
       location: "Odisha",
       duration: "18 months",
       value: "₹5.2 Crore"

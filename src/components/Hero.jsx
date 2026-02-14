@@ -8,7 +8,7 @@ function Hero({ navigate }) {
       <div className="absolute inset-0 bg-cover bg-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/hero.png)" }}
+          style={{ backgroundImage: "url(/hero.webp)" }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
       </div>

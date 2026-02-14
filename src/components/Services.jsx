@@ -6,7 +6,7 @@ function Services({ navigate }) {
     {
       title: "Excavation up to 12m",
       icon: FaTools,
-      image:"/excavation.png",
+      image:"/Excavation.png",
       description: "Deep excavation with advanced machinery",
       color: "from-orange-500 to-red-500"
     },
@@ -20,7 +20,7 @@ function Services({ navigate }) {
     {
       title: "RCC (M20, M25)",
       icon: FaBuilding,
-      image: "/RCC.png",
+      image: "/RCC.webp",
       description: "High-grade reinforced concrete work",
       color: "from-orange-600 to-yellow-500"
     },
